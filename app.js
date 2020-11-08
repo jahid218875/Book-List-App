@@ -23,6 +23,18 @@ btn.addEventListener('click', function(e){
         newYear.innerHTML = year.value
         newRow.appendChild(newYear)
 
+        let crossimg = document.createElement('img')
+        crossimg.setAttribute("src", "cross.jpg")
+        crossimg.setAttribute("width", "40");
+        crossimg.setAttribute("height", "40");
+        crossimg.setAttribute("alt", "Delete Button");
+        newRow.appendChild(crossimg);
+        
         bookList.appendChild(newRow)
+
+        crossimg.addEventListener('click', function(){
+            newRow.remove()
+        })
     }
+
 })
